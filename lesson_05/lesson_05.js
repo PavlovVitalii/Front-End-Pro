@@ -1,8 +1,7 @@
 const hour = Number(prompt("Plese enter hours."));
-let seconds = 0;
+const SECONDS_IN_HOUR = 3600
 
 if(!isNaN(hour)){
-seconds = hour * 3600;
+    alert(`${hour * SECONDS_IN_HOUR} seconds.`);
 }
 
-alert(`${seconds} seconds.`);
