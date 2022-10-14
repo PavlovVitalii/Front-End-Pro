@@ -10,4 +10,5 @@ arr.forEach((el) => {
     count++;
   }
 });
+console.log("Lesson_05.2");
 console.log(`task_1\nsum = ${sum}\ncount=${count}`);

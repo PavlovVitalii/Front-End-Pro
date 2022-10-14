@@ -21,6 +21,8 @@ while (bool) {
 arrElem.forEach((el, i) => {
   resultArray[i] = el;
 });
+console.log("Lasson_05.1");
 console.log(resultArray);
 resultArray.splice(1, 2);
 console.log(resultArray);
+console.log("\n");

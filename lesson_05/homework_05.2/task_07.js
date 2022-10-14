@@ -4,4 +4,4 @@ arr.forEach((el) => {
     sum_1 += el;
   }
 });
-console.log(`task = ${sum_1}`);
+console.log(`task_7= ${sum_1}`);

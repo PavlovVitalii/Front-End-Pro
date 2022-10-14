@@ -4,4 +4,4 @@ arr.forEach((el, i) => {
     arr[i] = 0;
   }
 });
-console.log(`task_10 = ${arr}`);
+console.log(`task_10 = ${arr}\n\n`);
