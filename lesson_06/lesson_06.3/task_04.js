@@ -12,11 +12,19 @@ const deleteChar = function deleteCharacter(str, char) {
     }
   });
 
-  const message = "No such characters were found in the entered string";
-  return resultString.length === str.length ? message : resultString;
+  if (resultString.length < str.length) {
+    return resultString;
+  }
 };
 
+if (deleteChar === undefined) {
+}
 console.log("----------4----------");
 if (enterString !== null && enterCharacter !== null) {
-  console.log(deleteChar(enterString, charactersArray));
+  console.log(
+    deleteChar(enterString, charactersArray) === undefined
+      ? "No such characters were found in the entered string"
+      : deleteChar(enterString, charactersArray)
+  );
 }
+

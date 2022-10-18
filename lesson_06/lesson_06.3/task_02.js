@@ -6,7 +6,7 @@ const isNumber = function checkInput(enterNumber) {
   if (
     typeof Number(enterNumber) === "number" &&
     enterNumber !== null &&
-    !isNaN(enterNumber) &&
+    !Number(isNaN(enterNumber)) &&
     enterNumber !== ""
   ) {
     return true;
@@ -30,32 +30,32 @@ const isValid = function dateValidation() {
   return false;
 };
 const doMath = function calculateResult(x, znak, y) {
-  let result = 0;
+
   if (znak === "+") {
-    result = x + y;
+    return x + y;
   }
   if (znak === "-") {
-    result = x - y;
+    return x - y;
   }
   if (znak === "*") {
-    result = x * y;
+    return x * y;
   }
   if (znak === "/") {
-    result = x / y;
+    return x / y;
   }
   if (znak === "%") {
-    result = x % y;
+    return x % y;
   }
   if (znak === "^") {
-    result = x ** y;
+    return x ** y;
   }
-  return result;
+  return 0;
 };
 
 console.log("----------2----------\n");
 if (isValid()) {
   console.log(
-    `${firstNumber} + ${secondNumber} = ${doMath(
+    `${firstNumber} ${operationSymbol} ${secondNumber} = ${doMath(
       Number(firstNumber),
       operationSymbol,
       Number(secondNumber)

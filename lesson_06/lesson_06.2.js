@@ -4,7 +4,7 @@ const resultHcaracters = function generateKey(length, characters) {
 
   for (let i = 0; i < length; i++) {
     const randomNumber =
-      Math.floor(Math.random() * (characters.length - 0)) + 0;
+      Math.floor(Math.random() * characters.length)  ;
     addCharacter += characters[randomNumber];
   }
   return addCharacter;
