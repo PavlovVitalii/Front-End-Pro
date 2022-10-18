@@ -9,4 +9,4 @@ const removeFunction = function removeElement(array, element) {
 
 removeFunction(array, 5);
 console.log('Task 6.1');
-console.log(array);
+console.log(`${array}`);

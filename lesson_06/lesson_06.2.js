@@ -9,5 +9,5 @@ const resultHcaracters = function generateKey(length, characters) {
   }
   return addCharacter;
 };
-
-console.log(resultHcaracters(10, characters));
+console.log('\nTask 6.2');
+console.log(`${resultHcaracters(10, characters)}\n`);
