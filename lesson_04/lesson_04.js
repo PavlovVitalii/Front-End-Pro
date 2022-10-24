@@ -36,6 +36,5 @@ function checkSport(sport) {
   if (sport.toLowerCase() === "баскетбол") {
     return "Круто! Хочеш стати Майклом Джорданом?";
   }
-
   return `Ваш улюбленний вид спорту: ${sport}`;
 }
