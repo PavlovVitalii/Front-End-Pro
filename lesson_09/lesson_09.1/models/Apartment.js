@@ -1,7 +1,9 @@
 class Apartment {
   people = [];
-  constructor(rooms) {
-    this.rooms = rooms;
-  }
 
+  addPeople(human) {
+    if (human instanceof Human) {
+      this.people.push(human);
+    }
+  }
 }

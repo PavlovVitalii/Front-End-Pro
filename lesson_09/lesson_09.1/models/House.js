@@ -1,18 +1,17 @@
 class House {
-  constructor(countApartmens) {
-    this.countApartmens = countApartmens;
-    this.apartmens = new Array(countApartmens);
-    this.#fillingHouseApartments(countApartmens)
+  apartments = [];
+  constructor(maxCountApartments) {
+    this.maxCountApartments = maxCountApartments;
   }
 
-  #createRandomApartment() {
-    return new Apartment(Math.floor(Math.random() * 4) + 1);
-  }
-
-  #fillingHouseApartments(countApartments) {
-    for (let i = 0; i < countApartments; i++) {
-      this.apartmens[i] = this.#createRandomApartment();
+  addApartment(apartment) {
+    if (
+      apartment instanceof Apartment &&
+      this.apartments.length < this.maxCountApartments
+    ) {
+      this.apartments.push(apartment);
+      return;
     }
+    console.log("Maximum apartment size exceeded.");
   }
-
 }
