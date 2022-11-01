@@ -1,5 +1,10 @@
 class Car {
+  brand;
+  model;
+  year;
+  color;
   owner;
+
   constructor(brand, model, year, color) {
     this.brand = brand;
     this.model = model;
@@ -9,17 +14,24 @@ class Car {
 
   addOwner(owner) {
     if (owner.age >= 18) {
-      this.owner = new Human_2(owner.name, owner.age);
+      this.owner = owner;
       return;
     }
-    console.log("Age cannot be less than 18 years.");
+    this.owner = null;
   }
 
   showInfoCar() {
+    if (this.owner !== null) {
+      console.log(
+        `Brand: ${this.brand}\nModel: ${this.model}\nYear: ${
+          this.year
+        }\nOwner ${this.owner.showInfoHuman()}`
+      );
+      return;
+    }
+
     console.log(
-      `Brand: ${this.brand}\nModel: ${this.model}\nYear: ${
-        this.year
-      }\n${this.owner.showInfoHuman()}`
+      `Brand: ${this.brand}\nModel: ${this.model}\nYear: ${this.year}\nOwner:`
     );
   }
 }
