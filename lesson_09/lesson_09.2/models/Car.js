@@ -20,7 +20,7 @@ class Car {
     this.owner = null;
   }
 
-  showInfoCar() {
+  showInfo() {
     if (this.owner !== null) {
       console.log(
         `Brand: ${this.brand}\nModel: ${this.model}\nYear: ${

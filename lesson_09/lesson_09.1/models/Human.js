@@ -4,7 +4,7 @@ class Human {
     this.gender = gender;
   }
 
-  createInfo() {
+  getInfo() {
     return `Name: ${this.name}\nGender: ${this.gender}`;
   }
 }
