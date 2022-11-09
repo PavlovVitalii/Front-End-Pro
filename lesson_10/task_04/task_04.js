@@ -6,7 +6,6 @@
 // Аналогічно з першим зображенням і кнопкою Prev.
 
 const img = document.querySelector("img");
-
 const butttons = document.getElementsByTagName("button");
 const prevButtton = butttons[0];
 const nextButton = butttons[1];
@@ -20,7 +19,7 @@ const ArrayImageSrc = [
 ];
 let index = 0;
 
-function hideButton(index) {
+function updateButtons(index) {
   if (index === 0) {
     prevButtton.style.visibility = "hidden";
   }
@@ -28,9 +27,7 @@ function hideButton(index) {
   if (index === ArrayImageSrc.length - 1) {
     nextButton.style.visibility = "hidden";
   }
-}
 
-function showButton(index) {
   if (index !== 0) {
     prevButtton.style.visibility = "visible";
   }
@@ -40,19 +37,16 @@ function showButton(index) {
   }
 }
 
-hideButton(index);
-showButton(index);
+updateButtons(index);
 
 prevButtton.addEventListener("click", () => {
   index -= 1;
-  hideButton(index);
-  showButton(index);
+  updateButtons(index);
   img.src = ArrayImageSrc[index];
 });
 
 nextButton.addEventListener("click", () => {
   index += 1;
-  hideButton(index);
-  showButton(index);
+  updateButtons(index);
   img.src = ArrayImageSrc[index];
 });
