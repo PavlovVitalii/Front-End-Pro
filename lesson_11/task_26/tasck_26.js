@@ -51,6 +51,7 @@ const products = [
     description:
       "Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.",
   },
+
   {
     id: 4,
     category_id: 3,
@@ -166,8 +167,19 @@ function createArrayByCategory(categoryId) {
 }
 
 function showProductList(list, target) {
-  const productsList = productsUl.querySelectorAll("li");
   list = createArrayByCategory(Number(target.dataset.categoryId));
+  let productsList = productsUl.querySelectorAll("li");
+
+  if (list.length > productsList.length) {
+    const li = document.createElement("li");
+    const countIteration = list.length - productsList.length;
+
+    for (let i = 0; i < countIteration; i++) {
+      productsUl.appendChild(li);
+      console.log(productsUl.length);
+    }
+    productsList = productsUl.querySelectorAll("li");
+  }
 
   productsList.forEach((el) => {
     el.innerText = "";
@@ -188,14 +200,12 @@ function showProductInfo(target, listProduct) {
 }
 
 function returnInitialState() {
-    const message = document.querySelector("#message");
-    message.style.visibility = "visible";
-    setTimeout(() => {
-        message.style.visibility = "hidden";
-        buyButton.style.visibility = "hidden";
-        description.style.visibility = "hidden";
-        productsUl.style.visibility = "hidden";
-
-    }, 1000);
-    
+  const message = document.querySelector("#message");
+  message.style.visibility = "visible";
+  setTimeout(() => {
+    message.style.visibility = "hidden";
+    buyButton.style.visibility = "hidden";
+    description.style.visibility = "hidden";
+    productsUl.style.visibility = "hidden";
+  }, 1000);
 }
