@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .filed {
+        padding-bottom: 20px;
+      }
+      div.filed lable {
+        display: block;
+        float: left;
+        width: 200px;
+        height: 30px;
+      }
+      .city {
+        padding-top: 20px;
+      }
+      table{
+        word-wrap: normal;
+        display: none;
+        margin: auto;
+      }
+      th, td{
+        border: 1px solid #000;
+        padding: 10px;
+      }
+      
+    </style>
+    <title>Task-30</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="filed">
+        <lable>Ім'я/Призвище </lable>
+        <input type="text" name="name" id="name" />
+      </div>
+
+      <div class="filed">
+        <lable>Дата народження </lable>
+        <input type="text" name="date" id="date" />
+      </div>
+
+      <fildset>
+        <legend>Стать</legend>
+        <lable><input type="radio" name="gender" value="Чоловік" />Ч</lable>
+        <lable><input type="radio" name="gender" value="Жінка" />Ж</lable>
+      </fildset>
+
+      <div class="filed city">
+        <select name="cities" id="cities-slect">
+          <option value="">-Виберіть місто-</option>
+          <option value="Харків">Харків</option>
+          <option value="Одеса">Одеса</option>
+          <option value="Дніпро">Дніпро</option>
+          <option value="Запоріжжя">Запоріжжя</option>
+          <option value="Львів">Львів</option>
+          <option value="Кривий ріг">Кривий ріг</option>
+          <option value="Вінниця">Вінниця</option>
+        </select>
+      </div>
+
+      <div class="filed">
+        <p><label for="address">Введіть адресу:</label></p>
+        <textarea name="address" id="address" cols="30" rows="5"></textarea>
+      </div>
+      <div class="filed language">
+        <input type="checkbox" name="English" id="checkbox" value="Ангіська" />
+        <label for="English">Английська</label>
+        <input type="checkbox" name="Ukrainian" id="checkbox" value="Украінська" />
+        <label for="Ukrainian">Українська</label>
+        <input type="checkbox" name="Chinese" id="checkbox" value="Китайська"/>
+        <label for="Chinese">Китайська</label>
+      </div >
+      <button>Зберегти</button>
+    </div>
+
+    <table>
+      <tr>
+        <th>Ім'я/Призвище</th>
+        <th>Дата народження</th>
+        <th>Стать</th>
+        <th>Місто</th>
+        <th>Адреса</th>
+        <th>Мовва</th>
+      </tr>
+    </table>
+    <script src="task_30.js"></script>
+  </body>
+</html>
