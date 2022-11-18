@@ -171,10 +171,10 @@ function showProductList(list, target) {
   let productsList = productsUl.querySelectorAll("li");
 
   if (list.length > productsList.length) {
-    const li = document.createElement("li");
     const countIteration = list.length - productsList.length;
 
     for (let i = 0; i < countIteration; i++) {
+      const li = document.createElement("li");
       productsUl.appendChild(li);
       console.log(productsUl.length);
     }
