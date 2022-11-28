@@ -238,12 +238,12 @@ function showProductInfo(target, listProduct) {
   buyButton.style.visibility = "visible";
 }
 
-function validate(city, userName, storage, countProduct) {
+function validate(city, name, storage, countProduct) {
   if (
-    city.trim().length > 0 &&
-    userName.trim().length > 0 &&
-    Number(storage.trim()) > 0 &&
-    Number(countProduct.trim()) > 0
+    city.length > 0 &&
+    name.trim().length > 0 &&
+    Number(storage) > 0 &&
+    Number(countProduct) > 0
   ) {
     const order = createOrder(
       cities.value,
