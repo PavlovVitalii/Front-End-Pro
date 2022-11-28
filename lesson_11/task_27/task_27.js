@@ -18,5 +18,5 @@ function openLink() {
     inputText.value = `https://www.${inputText.value}`;
   }
 
-  window.open(inputText.value, "_blanck");
+  window.open(inputText.value, "_blank");
 }
