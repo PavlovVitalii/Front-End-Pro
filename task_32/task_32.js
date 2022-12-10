@@ -35,5 +35,6 @@ comentsButton.addEventListener("click", () => {
       json.forEach((element) => {
         coments.innerHTML += `<div class="coment">Name: ${element.name}<br>Coment: ${element.body}</div>`;
       });
-    });
+    })
+    .catch((err) => alert(err));
 });
