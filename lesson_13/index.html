@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-34</title>
+    <style>
+      body {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: darkgray;
+      }
+      .item {
+        border: 1px solid #000;
+        border-radius: 10px;
+        width: 600px;
+        background-color: rgb(198, 230, 198);
+      }
+      .title {
+        text-align: center;
+      }
+      .conteiner_width {
+        padding: 10px;
+      }
+      .conteiner{
+        display: flex;
+      }
+      .item_info{
+        flex-grow: 1;
+      }
+      .img{
+        align-self: center;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="item">
+      <div class="conteiner_width">
+        <p class="title">Оберіть місто для відображення погоди.</p>
+        <select name="cities" id="">
+          <option value="">--Оберіть місто--</option>
+          <option value="Kyiv">Київ</option>
+          <option value="Lviv">Львів</option>
+          <option value="Dnipro">Дніпро</option>
+          <option value="Kharkiv">Харків</option>
+          <option value="Ivano-Frankivsk">Івано-Франківськ</option>
+          <option value="Zaporizhzhia">Запоріжжя</option>
+          <option value="Ternopil">Тернопіль</option>
+          <option value="Vinnytsia">Вінниця</option>
+          <option value="Rivne">Рівне</option>
+          <option value="Khmelnytskyi">Хмельницький</option>
+          <option value="Odesa">Одеса</option>
+          <option value="Lutsk">Луцьк</option>
+          <option value="Zhytomyr">Житомир</option>
+          <option value="Poltava">Полтава</option>
+          <option value="Mykolaiv">Миколаїв</option>
+          <option value="Chernivtsi">Чернівці</option>
+          <option value="Cherkasy">Черкаси</option>
+          <option value="Chernihiv">Чернігів</option>
+          <option value="Kropyvnytskyi">Кропевницький</option>
+          <option value="Sumy">Суми</option>
+          <option value="Uzhhorod">Ужгород</option>
+          <option value="Kherson">Херсон</option>
+          <option value="Donetsk">Донецьк</option>
+          <option value="Luhansk">Луганськ</option>
+          <option value="Simferopol">Сімферополь</option>
+        </select>
+        <div class="conteiner">
+          <div class="item_info">
+            <p class="temp">Температура:</p>
+            <p class="pressure">Тиск:</p>
+            <p class="description">Опис:</p>
+            <p class="humidity">Вологість:</p>
+            <p class="speed">Швидкість вітру:</p>
+            <p class="deg">Напрям:</p>
+          </div>
+
+          <div class="item_info"><img class="img" src="" alt="icon" /></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
