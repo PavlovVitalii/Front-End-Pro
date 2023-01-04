@@ -1,0 +1,37 @@
+header {
+  background-color: #61dafb;
+  text-align: center;
+  height: 10vh;
+  line-height: 66px;
+}
+
+.conteiner {
+  display: flex;
+  padding: 10px;
+}
+
+nav {
+  width: 25vw;
+  height: 100vh;
+  background-color: azure;
+  border: 1px solid #000;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  border: 1px solid #000;
+  width: 90%;
+  margin: 20px auto;
+}
+
+ul li > a {
+  display: block;
+}
+p {
+  padding-left: 16px;
+}
