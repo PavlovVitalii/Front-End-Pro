@@ -1,0 +1,21 @@
+.item {
+  background-color: rgb(124, 103, 143);
+  border: 1px solid #150101;
+  border-radius: 10px;
+  width: 8vw;
+  height: 120px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.App {
+  background-color: rgb(165, 151, 133);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border-radius: 10px;
+}
