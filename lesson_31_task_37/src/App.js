@@ -2,21 +2,24 @@ import InputForm from "./components/Input";
 import "./App.css";
 import ToDoItem from "./components/ToDoItem";
 import { useState } from "react";
-import { nanoid } from 'nanoid'
+import { nanoid } from "nanoid";
 
 function App() {
   const [items, setItems] = useState([]);
 
   const addToDo = (value) => {
-    if (value.trim()) {
-      setItems([...items, {id: nanoid(),title: value, isDone: false }]);
+    if (value) {
+      setItems([
+        ...items,
+        { id: nanoid(), title: value.trim(), isDone: false },
+      ]);
     }
   };
 
-  const toDoIsDone = (title) => {
+  const toDoIsDone = (id) => {
     setItems(
       items.map((el) => {
-        if (el.title !== title) {
+        if (el.id !== id) {
           return el;
         }
         return { ...el, isDone: !el.isDone };
@@ -27,9 +30,11 @@ function App() {
   return (
     <div className="container">
       <InputForm addToDo={addToDo}></InputForm>
-      {items.map((el, index) => {
+      {items.map((el) => {
+    
         return (
           <ToDoItem
+            id={el.id}
             title={el.title}
             key={el.id}
             isDone={el.isDone}
