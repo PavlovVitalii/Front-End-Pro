@@ -21,11 +21,11 @@ const Users = () => {
       );
   }, []);
 
-  const handleClick = (e) => {
+  const handleDelete = (e) => {
     setUsers(users.filter((el) => el.id !== Number(e.target.id)));
   };
 
-  const addClick = () => {
+  const showModal = () => {
     document.querySelector(".modal_container").style.visibility = "visible";
   };
 
@@ -55,7 +55,7 @@ const Users = () => {
                 <td>
                   <button
                     className="remove_btn"
-                    onClick={handleClick}
+                    onClick={handleDelete}
                     id={el.id}
                   >
                     Remove
@@ -66,7 +66,7 @@ const Users = () => {
           })}
         </tbody>
       </table>
-      <button onClick={addClick}>Add User</button>
+      <button onClick={showModal}>Add User</button>
       <Form addUser={addUser} />
     </>
   );
