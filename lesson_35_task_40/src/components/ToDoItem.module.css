@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+.item {
+  background-color: rgb(142, 235, 178);
+  border: 1px solid #000;
+  padding: 0 10px 5px 10px;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item_done {
+  background-color: rgb(220, 158, 144);
+  border: 1px solid #000;
+  padding: 0 10px 5px 10px;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title_item {
+  flex-grow: 3;
+  text-align: start;
+}
+
+.todo_item {
+  flex-wrap: 1;
+}
